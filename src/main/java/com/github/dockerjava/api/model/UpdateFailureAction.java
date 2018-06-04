@@ -12,6 +12,8 @@ public enum UpdateFailureAction {
     PAUSE,
 
     @JsonProperty("continue")
-    CONTINUE
+    CONTINUE,
 
+    @JsonProperty("rollback")
+    ROLLBACK
 }
