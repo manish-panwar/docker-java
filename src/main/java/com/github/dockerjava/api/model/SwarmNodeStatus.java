@@ -27,6 +27,12 @@ public class SwarmNodeStatus implements Serializable {
     @JsonProperty("State")
     private SwarmNodeState state;
 
+    @JsonProperty("Message")
+    private String message;
+
+    @JsonProperty("Addr")
+    private String addr;
+
     /**
      * @see #state
      */
@@ -40,6 +46,36 @@ public class SwarmNodeStatus implements Serializable {
      */
     public SwarmNodeStatus withState(SwarmNodeState state) {
         this.state = state;
+        return this;
+    }
+
+    /**
+     * @see #message
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * @see #message
+     */
+    public SwarmNodeStatus withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+
+    /**
+     * @see #addr
+     */
+    public String getAddr() {
+        return addr;
+    }
+
+    /**
+     * @see #addr
+     */
+    public SwarmNodeStatus withAddr(String addr) {
+        this.addr = addr;
         return this;
     }
 
